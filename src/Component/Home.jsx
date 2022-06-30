@@ -4,7 +4,8 @@ import Typical from 'react-typical';
 import slider from '../img/hero.png';
 import sun from '../img/sun.png';
 import moon from '../img/moon.png';
-
+import { Link } from "react-scroll";
+// import { Link } from 'react-router';
 
 function Home() {
   return (
@@ -48,22 +49,22 @@ function Home() {
               <div className='collapse navbar-collapse' id='navbarSupportedContent'>
                 <ul className='navbar-nav ms-auto mb-2 mb-lg-0'>
                   <li className='nav-item'>
-                    <a className='nav-link' href='#home'><i className='uil uil-estate'></i> Home </a>
+                    <Link className='nav-link' to='home'><i className='uil uil-estate'></i> Home </Link>
                   </li>
                   <li className='nav-item'>
-                    <a className='nav-link' href='#about'><i className='uil uil-user'></i> About</a>
+                    <Link className='nav-link' to='/about'><i className='uil uil-user'></i> About</Link>
                   </li>
                   <li className='nav-item'>
-                    <a className='nav-link' href='#experience'><i className='uil uil-bag-alt'></i> Experience</a>
+                    <Link className='nav-link' to='experience'><i className='uil uil-bag-alt'></i> Experience</Link>
                   </li>
                   <li className='nav-item'>
-                    <a className='nav-link' href='#skills'><i className='uil uil-react'></i> Skills</a>
+                    <Link className='nav-link' to='skills'><i className='uil uil-react'></i> Skills</Link>
                   </li>
                   <li className='nav-item'>
-                    <a className='nav-link' href='#portfolio'><i className='uil uil-window-grid'></i> Portfolio</a>
+                    <Link className='nav-link' to='portfolio'><i className='uil uil-window-grid'></i> Portfolio</Link>
                   </li>
                   <li className='nav-item'>
-                    <a className='nav-link' href='#contact'><i className='uil uil-calling'></i> Contact</a>
+                    <Link className='nav-link' to='contact'><i className='uil uil-calling'></i> Contact</Link>
                   </li>
                   <li className='nav-item'>
                     <img src={moon} alt='' id='icon'/>

@@ -24,6 +24,13 @@ function App() {
   );
 }
 
+function Aboutus() {
+  return (
+    <div className='App'>
+      <About />
+    </div>
+  )
+}
 // function App({ Component, pageProps }) {
 //   return (
 //     <Carousel />
