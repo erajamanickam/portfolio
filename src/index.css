@@ -23,7 +23,7 @@
 /*--About css*/
 /*--Experience css*/
 /*--Skills css*/
-/*--Portfolio css*/
+/*--Blog css*/
 /*--Contact css*/
 /*--Footer css*/
 /*--Back to top*/
@@ -413,8 +413,8 @@ nav.open .links {
 }
 .whatsapp-btn{
 	position:fixed;
-	width:50px;
-	height:50px;
+	width:44px;
+	height:44px;
 	bottom:40px;
 	left:20px;
 	background-color:#25d366;
@@ -422,7 +422,7 @@ nav.open .links {
 	border-radius:50%;
 	text-align:center;
   font-size:31px;
-	box-shadow: 2px 2px 3px #999;
+	/* box-shadow: 2px 2px 3px #999; */
   z-index:100;
 }
 
@@ -680,9 +680,9 @@ nav.open .links {
 
 
 /* ------------------------------ */
-/*         Portfolio              */
+/*             Blog               */
 /* ------------------------------ */
-#portfolio {
+#blog {
   background-color: var(--primary-color);
 }
 .read-more {
@@ -725,14 +725,6 @@ nav.open .links {
     padding: 12px;
     min-height: 344px;
 }
-.card-body {
-  /* text-align: center;  */
-}
-
-
-/* ------------------------------ */
-/*           Blog                 */
-/* ------------------------------ */
 .blog-desc {
   display: flex;
   justify-content: space-between;
@@ -758,12 +750,18 @@ nav.open .links {
 .blog-logo-date p {
   color: var(--dark-one);
 }
-@media (max-width: 767px) {
-  .slick-prev:before,
-.slick-next:before {
-  display: none;
+.blog-logo-date {
+  display: flex;
+  justify-content: space-between;
 }
+.blog-logo {
+  height: 30px;
+  border-radius: 6px;
+  float: right;
 }
+
+
+
 /* ------------------------------ */
 /*           Contact              */
 /* ------------------------------ */
@@ -1028,6 +1026,13 @@ footer p {
   }
 }
 
+@media (max-width: 767px) {
+  .slick-prev:before,
+  .slick-next:before {
+    display: none;
+  }
+}
+
 @media (max-width: 423px) {
   .hero-img {
     width: 100%!important;
@@ -1046,12 +1051,3 @@ footer p {
 }
 
 
-.blog-logo-date {
-  display: flex;
-  justify-content: space-between;
-}
-.blog-logo {
-  height: 30px;
-  border-radius: 6px;
-  float: right;
-}

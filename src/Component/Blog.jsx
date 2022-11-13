@@ -61,13 +61,13 @@ function Blog () {
 	  };
 
     return (
-        <section className='portfolio' id='portfolio'>
+        <section className='blog' id='blog'>
 			<div className='container'>
 				<div className='row'>
 					<div className='col-12' data-aos="fade-down">
 						<h2 className='title'>Recent Blog</h2>
 						<div className='title-bar'></div>
-						<p className='text-center'>Recent Blog data Get from the  <a href="https://dev.to/">dev.to</a> api</p>
+						<p className='text-center'>Recent Blog data Get from the  <a href="https://dev.to/" target='_blank'>dev.to</a> api</p>
 					</div>
 				</div>
 			
