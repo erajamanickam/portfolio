@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 :root {
   --dark-one: #333;
@@ -9,7 +10,7 @@
   --light-three: #f6f7fb;
 
   --primary-color: #edf2fc;
-  --secondary-color: #212121;
+  --secondary-color: #151439;
 }
 .dark-theme {
   --primary-color: #000106;
@@ -36,9 +37,9 @@
 }
 
 html { scroll-behavior: smooth; }
-body { font-family: "Poppins", sans-serif; }
+body { font-family: "Josefin Sans", sans-serif; }
 a {	text-decoration: none; }
-ul { list-style: none; }
+ul { list-style: none; padding-left: 0; }
 img {	width: 100%; }
 
 section {
@@ -105,7 +106,9 @@ section {
 .mb-20 { margin-bottom: 20px; }
 
 
-/* Scrollbar */
+/* ------------------------------ */
+/*         scrollbar              */
+/* ------------------------------ */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track {
 	background: #d3c4ff;
@@ -116,7 +119,10 @@ section {
 	border-radius: 10px;
 }
 
-/* Dark mode */
+
+/* ------------------------------ */
+/*         dark mode              */
+/* ------------------------------ */
 .checkbox {
   opacity: 0;
   position: absolute;
@@ -150,7 +156,9 @@ section {
 }
 
 
-/* Header css */
+/* ------------------------------ */
+/*           header               */
+/* ------------------------------ */
 header {
   width: 100%;
   background-color: var(--primary-color);
@@ -509,7 +517,9 @@ nav.open .links {
 }
 
 
-/* About */
+/* ------------------------------ */
+/*         aboutus                */
+/* ------------------------------ */
 #about {
   background-color: var(--primary-color);
 }
@@ -529,7 +539,9 @@ nav.open .links {
 }
 
 
-/* Experience */
+/* ------------------------------ */
+/*         Experience             */
+/* ------------------------------ */
 #experience {
   background-color: var(--primary-color);
 }
@@ -631,7 +643,9 @@ nav.open .links {
 }
 
 
-/* Skills */
+/* ------------------------------ */
+/*           skills               */
+/* ------------------------------ */
 .skills {
   background-color: var(--primary-color);
 }
@@ -665,7 +679,9 @@ nav.open .links {
 }
 
 
-/* Portfolio */
+/* ------------------------------ */
+/*         Portfolio              */
+/* ------------------------------ */
 #portfolio {
   background-color: var(--primary-color);
 }
@@ -707,12 +723,50 @@ nav.open .links {
     box-shadow: 0 0px 10px rgb(0 0 0 / 10%);
     border-radius: 20px;
     padding: 12px;
+    min-height: 344px;
 }
 .card-body {
-  text-align: center;
+  /* text-align: center;  */
 }
 
-/* Contact */
+
+/* ------------------------------ */
+/*           Blog                 */
+/* ------------------------------ */
+.blog-desc {
+  display: flex;
+  justify-content: space-between;
+}
+.portfolio hr {
+  margin-top: 5px;
+}
+.blog-desc a {
+  color: #717171;
+}
+.blog-desc ul li {
+  padding-right: 10px;
+  color: #717171;
+}
+.card-title a {
+  color: var(--dark-one);
+  font-weight: 600;
+}
+.slick-prev:before,
+.slick-next:before {
+    color: var(--main-color)!important;
+}
+.blog-logo-date p {
+  color: var(--dark-one);
+}
+@media (max-width: 767px) {
+  .slick-prev:before,
+.slick-next:before {
+  display: none;
+}
+}
+/* ------------------------------ */
+/*           Contact              */
+/* ------------------------------ */
 #contact {
   background-color: var(--primary-color);
 }
@@ -747,7 +801,9 @@ nav.open .links {
   font-weight: 500;
 }
 
-/* Footer */
+/* ------------------------------ */
+/*            Footer              */
+/* ------------------------------ */
 footer {
   padding: 10px;
   background: #000;
@@ -767,7 +823,9 @@ footer p {
   color: #fff;
 }
 
-/* Back to top */
+/* ------------------------------ */
+/*         Back to top            */
+/* ------------------------------ */
 .back-btn-wrap {
   position: relative;
   margin-left: 2.5rem;
@@ -866,7 +924,9 @@ footer p {
   margin-top: 7px;
 }
 
-/* Responsive */
+/* ------------------------------ */
+/*         Responsive             */
+/* ------------------------------ */
 @media (max-width: 1280px) {
   .header-content .image .img-element {
     max-width: 500px;
@@ -983,4 +1043,15 @@ footer p {
   .back-btn-wrap {
     display: none;
   }
+}
+
+
+.blog-logo-date {
+  display: flex;
+  justify-content: space-between;
+}
+.blog-logo {
+  height: 30px;
+  border-radius: 6px;
+  float: right;
 }

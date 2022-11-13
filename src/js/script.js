@@ -91,3 +91,13 @@ windowOn.on('scroll', function () {
 });
 
 document.getElementById('react-skill').style.width = '60%';
+
+plugins: [
+  // other plugins,
+  new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+  }),
+]
+//...

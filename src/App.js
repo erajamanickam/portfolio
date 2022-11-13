@@ -5,19 +5,20 @@ import About from './Component/About';
 import Experience from './Component/Experience';
 import Skills from './Component/Skills';
 import Portfolio from './Component/Portfolio';
+import Blog from './Component/Blog';
 import Contact from './Component/Contact';
 import Footer from './Component/Footer';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import ReactGa from 'react-ga';
+
 
 function App() {
 
-  useEffect(() => {
-    ReactGa.initialize('G-P52FG9L651')
-
+    ReactGa.initialize('G-P52FG9L651');
+    ReactGa.pageview(window.location.pathname + window.location.search);
+    console.log("GA working");
     //to report page view
-    ReactGa.pageview('/')
-  }, [])
+
   return (
     <div className="App">
       <Header />
@@ -25,7 +26,7 @@ function App() {
       <About />
       <Experience />
       <Skills width='50%'/>
-      <Portfolio />
+      <Blog />
       <Contact />
       <Footer />
     </div>

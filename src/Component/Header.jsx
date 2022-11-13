@@ -29,7 +29,7 @@ function Header() {
                     <a className='nav-link' href='#skills'><i className='uil uil-react'></i> Skills</a>
                   </li>
                   <li className='nav-item'>
-                    <a className='nav-link' href='#portfolio'><i className='uil uil-window-grid'></i> Portfolio</a>
+                    <a className='nav-link' href='#blog'><i className='uil uil-pen'></i> Blog</a>
                   </li>
                   <li className='nav-item'>
                     <a className='nav-link' href='#contact'><i className='uil uil-calling'></i> Contact</a>

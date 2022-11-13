@@ -53,8 +53,7 @@ function Hero() {
                   <li><a href='https://github.com/erajamanickam/' target='_blank'><i className='uil uil-github'></i></a></li>
                   <li><a href='mailto:erajamanickam72@gmail.com' target='_blank'><i className='uil uil-envelope-info'></i></a></li>
                   <li><a href='https://codepen.io/erajamanickam' target='_blank'><i className='fab fa-codepen'></i></a></li>
-                  <li><a href='https://www.be.net/rajamanickam3' target='_blank'><i className='uil uil-behance'></i></a></li>
-                  <li><a href='https://dribbble.com/rajamanickamweb' target='_blank'><i className='uil uil-dribbble'></i></a></li>
+                  <li><a href='https://www.youtube.com/channel/UCQqbJ6jeyqk1_bGwGjVSJvw' target='_blank'><i className='uil uil-youtube'></i></a></li>
                 </ul>
               </div>
         		</div>

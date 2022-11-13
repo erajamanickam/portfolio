@@ -20,14 +20,14 @@ function About() {
      data-aos-offset="300"
      data-aos-easing="ease-in-sine">
 						<div className="about-content">
-						<p>Web Developer with 2 year of experience. Develop highly interactive Front end / User Interfaces for Websites. </p>
+						<p>Web Developer with 2+ year of experience. Develop highly interactive Front end / User Interfaces for Websites. </p>
 						<p>Interested in the entire frontend spectrum and working on ambitious projects. 
 							Proficient at Web Application, Website Design, Ecommerce Development and Search Engine Optimization. 
 							I have done my graduated <strong>Bachelor of Computer Science</strong> in 2020 Batch</p>
 						<div className="row">
 							<div className="col-md-12 col-lg-6">
 								<ul>
-		        					<li><i className="uil uil-bag-alt"></i> 2 yr Experience</li>
+		        					<li><i className="uil uil-bag-alt"></i> 2+ yr Experience</li>
 		        				</ul>
 							</div>
 							<div className="col-md-12 col-lg-6">
