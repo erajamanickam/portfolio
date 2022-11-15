@@ -747,6 +747,9 @@ nav.open .links {
 .slick-next:before {
     color: var(--main-color)!important;
 }
+.slick-slider {
+  overflow: hidden;
+}
 .blog-logo-date p {
   color: var(--dark-one);
 }
