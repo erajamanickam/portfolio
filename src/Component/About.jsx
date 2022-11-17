@@ -23,7 +23,7 @@ function About() {
 						<p>Web Developer with 2+ years of experience. Develop highly interactive Front end / User Interfaces for Websites. </p>
 						<p>Interested in the entire frontend spectrum and working on ambitious projects. 
 							Proficient at Web Application, UI Design, Ecommerce Development and Search Engine Optimization. 
-							I have done my under graduatee Bachelor of Computer Science and pursuing Master of Science in information Technology in alagappa University.</p>
+							I have done my under graduatee Bachelor of Computer Science and pursuing Master of Science in information Technology at alagappa University.</p>
 						<div className="row">
 							<div className="col-md-12 col-lg-6">
 								<ul>
