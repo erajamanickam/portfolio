@@ -67,7 +67,7 @@ function Blog () {
 					<div className='col-12' data-aos="fade-down">
 						<h2 className='title'>Recent Blog</h2>
 						<div className='title-bar'></div>
-						<p className='text-center'>Recent Blog data Get from the  <a href="https://dev.to/" target='_blank'>dev.to</a> api</p>
+						<p className='text-center'>Blog data fetch from the  <a href="https://dev.to/" target='_blank'>dev.to</a> api</p>
 					</div>
 				</div>
 			
@@ -80,7 +80,7 @@ function Blog () {
 						  <div className='card-body'>
                 		<ul className='blog-logo-date mb-0'>
 							  <li><p><i className='uil uil-calendar-alt'></i> {user.readable_publish_date}</p></li>
-							  <li><img src={devlogo} className='blog-logo' /></li>
+							  <li><img src={devlogo} className='blog-logo' alt='dev.to logo' /></li>
                 		</ul>
 						<hr />
 						    <p className='card-title'><a href={user.url} target='_blank'>{user.title}</a></p>
@@ -89,7 +89,7 @@ function Blog () {
 									<li className='pl-3'><i className='uil uil-heart-alt'></i> {user.public_reactions_count}</li>
 									<li><i className='uil uil-comment-alt'></i> {user.comments_count}</li>
 								</ul>
-								<a href={user.url} target='_blank'><i className='uil uil-link'></i> Read More</a>
+								<a href={user.url} target='_blank'><i className='uil uil-link'></i> Read More..</a>
 							</div>
 						  </div>
 						</div>

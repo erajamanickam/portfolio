@@ -762,9 +762,15 @@ nav.open .links {
   border-radius: 6px;
   float: right;
 }
-
-
-
+.blog .text-center a {
+  color: var(--main-color);
+}
+.blog .uil-heart-alt {
+  color: #ff1313;
+}
+.blog .uil-comment-alt {
+  color: #6b44e0;
+}
 /* ------------------------------ */
 /*           Contact              */
 /* ------------------------------ */
