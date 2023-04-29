@@ -43,7 +43,7 @@ function About() {
 				        </div>
 					</div>
 					<div className="col-12 col-lg-6 align-self-center" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-						<div className="about-img" >
+						<div className="about-img pt-5 pt-lg-0">
 							<img src={about} alt="Rajamanickam React Developer" />
 						</div>
 					</div>
