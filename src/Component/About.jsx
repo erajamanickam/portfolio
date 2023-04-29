@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import about from '../img/about-rajamanickam.png';
+import about from '../img/about-latest-img.png';
 import AOS from 'aos';
 import "aos/dist/aos.css";
 
@@ -12,13 +12,11 @@ function About() {
         <section className='about' id='about'>
 			<div className="container">
 				<div className="row">
-					<div className="col-12" >
+					<div className="col-12">
 						<h2 className="title">About Me</h2>
 						<div className="title-bar"></div>
 					</div>
-					<div className="col-12 col-lg-6" data-aos="fade-right"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine">
+					<div className="col-12 col-lg-6 align-self-center" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine">
 						<div className="about-content">
 						<p>Web Developer with 2+ years of experience. Develop highly interactive Front end / User Interfaces for Websites. </p>
 						<p>Interested in the entire frontend spectrum and working on ambitious projects. 
@@ -44,7 +42,7 @@ function About() {
 						</div>
 				        </div>
 					</div>
-					<div className="col-12 col-lg-6" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+					<div className="col-12 col-lg-6 align-self-center" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
 						<div className="about-img" >
 							<img src={about} alt="Rajamanickam React Developer" />
 						</div>

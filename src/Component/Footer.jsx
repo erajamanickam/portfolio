@@ -2,6 +2,8 @@ import React from 'react';
 const backtop = { display: 'none'}
 
 function Footer() {
+
+    const year = new Date().getFullYear();
     return (
         <footer>
             <div className='container'>
@@ -15,6 +17,7 @@ function Footer() {
                             <li><a href='https://www.be.net/rajamanickam3' target='_blank'><i className='uil uil-behance'></i></a></li>
                             <li><a href='https://codepen.io/erajamanickam' target='_blank'><i className='fab fa-codepen'></i></a></li>
                         </ul>
+                        <p className='text-center'><i className='uil uil-copyright'></i> Copyright {year}. All rights reserved.</p>
                     </div>                   
                 </div>
             </div>

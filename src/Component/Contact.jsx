@@ -1,14 +1,72 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import AOS from 'aos';
 import "aos/dist/aos.css";
 
-export const Contact = () => {
+// export const Contact = () => {
+function Contact() {
   const form = useRef();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+  
+  const [errors, setErrors] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+
+  const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})[0-9]+$/;
+  const nameRegex = /[0-9a-zA-Z]{3,}/;
+  const msgRegex = /[0-9a-zA-Z]{6,}/;
+
+  const validateForm = () => {
+    let isValid = true;
+    let newErrors = {};
+  
+    if (!formData.name) {
+      isValid = false;
+      newErrors.name = 'Name is required *';
+    } else if (!nameRegex.test(formData.name)) {
+      isValid = false;
+      newErrors.name = 'Atleast 3 character name *';
+    }
+
+    if (!formData.phone) {
+      isValid = false;
+      newErrors.phone = 'Phone no is required';
+    } else if (!phoneRegex.test(formData.phone)) {
+      isValid = false;
+      newErrors.phone = 'Phone is invalid *';
+    }
+  
+    if (!formData.email) {
+      isValid = false;
+      newErrors.email = 'Email is required *';
+    } else if (!emailRegex.test(formData.email)) {
+      isValid = false;
+      newErrors.email = 'Email is invalid';
+    }
+  
+    if (!formData.message) {
+      isValid = false;
+      newErrors.message = 'Message is required *';
+    } else if (!msgRegex.test(formData.message)) {
+      isValid = false;
+      newErrors.message = 'Atleast 6 character message';
+    }
+  
+    setErrors(newErrors);
+    return isValid;
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    if (!validateForm()) return;
     emailjs.sendForm('service_2hplr7f', 'template_0amgy3s', form.current, 'user_e6CZf4K6kU9TCU80qBwFO')
       .then((result) => {
           alert('Thank You, I am shortly contact with you');
@@ -29,7 +87,7 @@ export const Contact = () => {
                     <h2 className='title'>Get in Touch</h2>
                     <div className='title-bar'></div>
                 </div>
-                <div className='col-12 col-lg-6' data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="300">
+                <div className='col-12 col-lg-6 align-self-center' data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="300">
                     <h5>Contact Info</h5>
                     <ul>
                         <li>
@@ -55,19 +113,61 @@ export const Contact = () => {
                         </li>
                     </ul>
                 </div>
-                <div className='col-12 col-lg-6' data-aos="fade-down" data-aos-anchor-placement="bottom-bottom" data-aos-delay="300">
+                <div className='col-12 col-lg-6 align-self-center' data-aos="fade-down" data-aos-anchor-placement="bottom-bottom" data-aos-delay="100">
                     <h5 className='m-mr-30'>Message Me</h5>
                     <form ref={form} onSubmit={sendEmail}>
-                      <label for='name' className='form-label'>Name</label>
-                      <input type='text' name='name' className='form-control mb-20' id='name' placeholder='Your Name' required />
+                      <input 
+                        type='text' 
+                        name='name' 
+                        className='form-control mb-3' 
+                        id='name' 
+                        placeholder='Your Name' 
+                        value={formData.name}
+                        onChange={event =>
+                            setFormData({ ...formData, name: event.target.value })
+                        }
+                       />
+                       {errors.name && <p className='error'>{errors.name}</p>}
 
-                      <label for='email' className='form-label'>Email address</label>
-                      <input type='email' name='email' className='form-control mb-20' id='email' placeholder='Your Email address' required />
+                      <input 
+                        type='email' 
+                        name='email' 
+                        className='form-control mb-3' 
+                        placeholder='Your Email' 
+                        id="email"
+                        value={formData.email}
+                        onChange={event =>
+                            setFormData({ ...formData, email: event.target.value })
+                        }
+                      />
+                      {errors.email && <p className='error'>{errors.email}</p>}         
 
-                      <label for='mobile' className='form-label'>Mobile</label>
-                      <input type='text' name='message' className='form-control mb-20' id='text' placeholder='Your mobile no' required />
+                      <input 
+                        type='text' 
+                        name='phone' 
+                        className='form-control mb-3'
+                        placeholder='Your mobile no' 
+                        id="phone"
+                        value={formData.phone}
+                        onChange={event =>
+                            setFormData({ ...formData, phone: event.target.value })
+                        }
+                       />
+                      {errors.phone && <p className='error'>{errors.phone}</p>}
+                      
+                      <textarea 
+                        name='message' 
+                        className='form-control mb-3' 
+                        placeholder='Your Message'
+                        id="message"                      
+                        value={formData.message}
+                        onChange={event =>
+                            setFormData({ ...formData, message: event.target.value })
+                        }
+                      ></textarea>
+                      {errors.message && <p className='error'>{errors.message}</p>}
 
-                      <input type="submit" className="read-more" value="Submit" />
+                      <input type="submit" className="border-cta" value="Submit" />
 					</form>
 				</div>
 			</div>

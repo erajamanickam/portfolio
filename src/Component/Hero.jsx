@@ -31,7 +31,7 @@ function Hero() {
                         <Typical
                         loop={Infinity}
                         steps={[
-                          "Reactjs Developer",
+                          "React Developer",
                           1000,
                           "Web Developer",
                           1000,

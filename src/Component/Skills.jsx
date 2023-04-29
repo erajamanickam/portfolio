@@ -1,17 +1,15 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import "aos/dist/aos.css";
+import react from '../img/react.png';
+import express from '../img/expressjs.png';
+import mysql from '../img/mysql.png';
+import node from '../img/nodejs.png';
+import jquery from '../img/jquery.png';
+import javascript from '../img/javascript.png';
+import php from '../img/php.png';
+import bootstrap from '../img/bootstrap.png';
 
-const html = {	width: '95%'}
-const react = {	width: '60%'}
-const js = { width: '70%'}
-const css = { width: '80%'}
-const bootstrap = {	width: '80%'}
-const wordpress = {	width: '60%'}
-const php = { width: '65%'}
-const seo = { width: '75%'}
-const drupal = { width: '60%' }
-const opencart = { width: '79%' }
 
 
 function Skills() {
@@ -24,77 +22,45 @@ function Skills() {
 			<div className='container'>
 				<div className='row'>
 					<div className='col-12' data-aos="fade-down">
-						<h1 className='title'>Skills</h1>
+						<h2 className='title'>Skills</h2>
 						<div className='title-bar'></div>
 					</div>
-					<div className='col-12 col-lg-6'>
-						 <div className='skills' data-aos="flip-up">
-						 	<div className='skill'>
-			                  <h5 className='skill-title'><i className="fa-brands fa-html5"></i> HTML5</h5>
-			                  <div className='skill-bar'>
-			                    <div className='skill-progress' style={html} data-progress='95%'></div>
-			                  </div>
-			                </div>
-			                <div className='skill' data-aos="flip-up">
-			                  <h5 className='skill-title'><i className="fa-brands fa-react"></i> React JS</h5>
-			                  <div className='skill-bar'>
-			                    <div className='skill-progress' style={react} data-progress='60%' ></div>
-			                  </div>
-			                </div>
-			                <div className='skill' data-aos="flip-up">
-			                  <h5 className='skill-title'><i className="fa-brands fa-js"></i> Javascript</h5>
-			                  <div className='skill-bar'>
-			                    <div className='skill-progress' style={js} data-progress='70%'></div>
-			                  </div>
-			                </div>
-							<div className='skill' data-aos="flip-up">
-			                  <h5 className='skill-title'><i className="fa-brands fa-css3"></i> CSS3</h5>
-			                  <div className='skill-bar'>
-			                    <div className='skill-progress' style={css} data-progress='80%'></div>
-			                  </div>
-			                </div>
-							<div className='skill' data-aos="flip-up">
-			                  <h5 className='skill-title'><i className="fa-brands fa-bootstrap"></i> Bootstrap</h5>
-			                  <div className='skill-bar'>
-			                    <div className='skill-progress' style={bootstrap} data-progress='80%'></div>
-			                  </div>
-			                </div>
-			            </div>
+				</div>
+
+				<div className='row'>
+					<div className='col-lg-3 col-md-6 col-sm-6 col-6'>
+						<img src={react} alt='React'/>
+						<p className='text-center pt-3'>React</p>
 					</div>
-					<div className='col-12 col-lg-6'>
-						<div className='skills'>
-			                <div className='skill' data-aos="flip-down">
-			                  <h5 className='skill-title'><i className="fa-brands fa-wordpress"></i> WordPress</h5>
-			                  <div className='skill-bar'>
-			                    <div className='skill-progress' style={wordpress} data-progress='60%'></div>
-			                  </div>
-			                </div>
-							<div className='skill' data-aos="flip-down">
-			                  <h5 className='skill-title'><i className="fa-brands fa-opencart"></i> Opencart</h5>
-			                  <div className='skill-bar'>
-			                    <div className='skill-progress' style={opencart} data-progress='79%'></div>
-			                  </div>
-			                </div>
-							<div className='skill' data-aos="flip-down">
-			                  <h5 className='skill-title'><i className="fa-brands fa-drupal"></i> Drupal</h5>
-			                  <div className='skill-bar'>
-			                    <div className='skill-progress' style={drupal} data-progress='65%'></div>
-			                  </div>
-			                </div>
-			                <div className='skill' data-aos="flip-down">
-			                  <h5 className='skill-title'><i className="fa-brands fa-php"></i> PHP / MySQL</h5>
-			                  <div className='skill-bar'>
-			                    <div className='skill-progress' style={php} data-progress='65%'></div>
-			                  </div>
-			                </div>
-			                <div className='skill' data-aos="flip-down">
-			                  <h5 className='skill-title'><i className="fa-brands fa-google"></i> SEO</h5>
-			                  <div className='skill-bar'>
-			                    <div className='skill-progress' style={seo} data-progress='75%'></div>
-			                  </div>
-			                </div>
-			              </div>
+					<div className='col-lg-3 col-md-6 col-sm-6 col-6'>
+						<img src={node} alt='NodeJS' />
+						<p className='text-center pt-3'>NodeJS</p>
 					</div>
+					<div className='col-lg-3 col-md-6 col-sm-6 col-6'>
+						<img src={express} alt='Express' />
+						<p className='text-center pt-3'>Express</p>
+					</div>
+					<div className='col-lg-3 col-md-6 col-sm-6 col-6'>
+						<img src={mysql} alt='MySQL' />
+						<p className='text-center pt-3'>MySQL</p>
+					</div>
+					<div className='col-lg-3 col-md-6 col-sm-6 col-6'>
+						<img src={php} className="pt-3" alt='PHP' />
+						<p className='text-center pt-3'>PHP</p>
+					</div>
+					<div className='col-lg-3 col-md-6 col-sm-6 col-6'>
+						<img src={bootstrap} className="pt-3" alt='Bootstrap' />
+						<p className='text-center pt-3'>Bootstrap</p>
+					</div>
+					<div className='col-lg-3 col-md-6 col-sm-6 col-6'>
+						<img src={javascript} className="pt-3" alt='Javascript' />
+						<p className='text-center pt-3'>Javascript</p>
+					</div>
+					<div className='col-lg-3 col-md-6 col-sm-6 col-6'>
+						<img src={jquery} className="pt-3" alt='jquery' />
+						<p className='text-center pt-3'>jQuery</p>
+					</div>
+					
 				</div>
 			</div>
 		</section>

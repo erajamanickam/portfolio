@@ -36,11 +36,19 @@
 	box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; }
+html { 
+  scroll-behavior: smooth;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 body { font-family: "Josefin Sans", sans-serif; }
 a {	text-decoration: none; }
 ul { list-style: none; padding-left: 0; }
-img {	width: 100%; }
+img {	
+  width: 100%; 
+  -webkit-user-drag: none;
+}
 
 section {
   padding: 50px 0 50px 0;
@@ -523,9 +531,9 @@ nav.open .links {
 #about {
   background-color: var(--primary-color);
 }
-#about .about-content {
+/* #about .about-content {
   padding-top: 60px;
-}
+} */
 #about ul {
   list-style: none;
 }
@@ -677,6 +685,11 @@ nav.open .links {
   background-color: var(--main-color);
   transition: 1s;
 }
+.skills img {
+  width: 70px;
+  margin: auto;
+  display: block;
+}
 
 
 /* ------------------------------ */
@@ -770,6 +783,59 @@ nav.open .links {
 }
 .blog .uil-comment-alt {
   color: #6b44e0;
+}
+
+/* ------------------------------ */
+/*             Blog               */
+/* ------------------------------ */
+#youtube {
+  background-color: var(--primary-color);
+}
+#youtube h4 {
+  color: var(--secondary-color);
+}
+#youtube img {
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.subscribe {
+  background: red;
+  color: var(--light-one);
+  padding: 10px 20px;
+  border-radius: 7px;
+  display: inline-block;
+  border: 1px solid transparent;
+}
+.subscribe:hover {
+  background: transparent;
+  color: red;
+  border: 1px solid red;
+  transition: .6s;
+}
+.border-cta {
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  background: transparent;
+  padding: 10px 20px;
+  border-radius: 7px;
+  display: inline-block;
+  transition: .6s;
+}
+.border-cta:hover {
+  background: var(--main-color);
+  color: #fff;
+  transition: .6s;
+}
+.error {
+  color: #ff5d22;
+  transition: .8s;
+  margin-top: -12px;
+}
+.form-control:focus {
+  box-shadow: none;
+  border-color: var(--main-color);
+}
+textarea {
+  resize: none;
 }
 /* ------------------------------ */
 /*           Contact              */

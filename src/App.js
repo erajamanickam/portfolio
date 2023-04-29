@@ -4,19 +4,19 @@ import Hero from './Component/Hero';
 import About from './Component/About';
 import Experience from './Component/Experience';
 import Skills from './Component/Skills';
-import Portfolio from './Component/Portfolio';
 import Blog from './Component/Blog';
 import Contact from './Component/Contact';
 import Footer from './Component/Footer';
-import { useEffect, useState } from 'react';
+import React from 'react';
 import ReactGa from 'react-ga';
+import Youtube from './Component/Youtube';
 
 
 function App() {
 
     ReactGa.initialize('G-P52FG9L651');
     ReactGa.pageview(window.location.pathname + window.location.search);
-    console.log("GA working");
+    // console.log("GA working");
     //to report page view
 
   return (
@@ -27,6 +27,7 @@ function App() {
       <Experience />
       <Skills width='50%'/>
       <Blog />
+      <Youtube />
       <Contact />
       <Footer />
     </div>

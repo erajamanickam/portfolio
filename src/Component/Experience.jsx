@@ -25,7 +25,7 @@ function Experience() {
                         <li data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                           <div className='icon'></div>
                           <span className='time'>June 2021 - Jan 2022</span>
-                          <h5>Web Designer - <span className='place'>WiseWebTek</span></h5>
+                          <h5>Frontend Developer - <span className='place'>WiseWebTek</span></h5>
                           <p>Chennai</p>
                         </li>
                         <li data-aos="fade-up" data-aos-anchor-placement="top-bottom">
@@ -38,7 +38,7 @@ function Experience() {
                     </div>
                 </div>
                 <div className='col-12 col-lg-6'>
-                    <h1 className='title' data-aos="fade-down">Internship</h1>
+                    <h2 className='title' data-aos="fade-down">Internship</h2>
                     <div className='title-bar' data-aos="fade-down"></div>
                     <div className='exp-list'>
                       <ul>
