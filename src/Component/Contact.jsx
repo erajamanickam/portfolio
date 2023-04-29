@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import AOS from 'aos';
 import "aos/dist/aos.css";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 
 // export const Contact = () => {
 function Contact() {
@@ -167,12 +167,12 @@ function Contact() {
                         }
                       ></textarea>
                       {errors.message && <p className='error'>{errors.message}</p>}
-
-                      <input type="submit" className="border-cta" value="Submit" />
-                      <ReCAPTCHA
+                      {/* <ReCAPTCHA
                             sitekey="6LcBCcslAAAAAIiIrqrw4rt7c0uY_Z0-Z-MwNsD1"
                             onChange={validateForm}
-                        />
+                        /> */}
+                      <input type="submit" className="border-cta" value="Submit" />
+                      
 					</form>
 				</div>
 			</div>
