@@ -45,14 +45,6 @@ function Skills() {
 						<p className='text-center pt-3'>MySQL</p>
 					</div>
 					<div className='col-lg-3 col-md-6 col-sm-6 col-6'>
-						<img src={php} className="pt-3" alt='PHP' />
-						<p className='text-center pt-3'>PHP</p>
-					</div>
-					<div className='col-lg-3 col-md-6 col-sm-6 col-6'>
-						<img src={bootstrap} className="pt-3" alt='Bootstrap' />
-						<p className='text-center pt-3'>Bootstrap</p>
-					</div>
-					<div className='col-lg-3 col-md-6 col-sm-6 col-6'>
 						<img src={javascript} className="pt-3" alt='Javascript' />
 						<p className='text-center pt-3'>Javascript</p>
 					</div>
@@ -60,7 +52,14 @@ function Skills() {
 						<img src={jquery} className="pt-3" alt='jquery' />
 						<p className='text-center pt-3'>jQuery</p>
 					</div>
-					
+					<div className='col-lg-3 col-md-6 col-sm-6 col-6'>
+						<img src={php} className="pt-3" alt='PHP' />
+						<p className='text-center pt-3'>PHP</p>
+					</div>
+					<div className='col-lg-3 col-md-6 col-sm-6 col-6'>
+						<img src={bootstrap} className="pt-3" alt='Bootstrap' />
+						<p className='text-center pt-3'>Bootstrap</p>
+					</div>
 				</div>
 			</div>
 		</section>

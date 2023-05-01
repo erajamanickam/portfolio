@@ -8,26 +8,24 @@ import "slick-carousel/slick/slick-theme.css";
 
 function Blog () {
 
-    const [users, setUsers] = useState([])
+	const [data, setData] = useState([]);
 
-    const fetchData = () => {
-		fetch("https://dev.to/api/articles?username=rajamanickam")
-		  .then(response => {
-			return response.json()
-		  })
-		  .then(data => {
-			setUsers(data)
-		  })
-	  }
+	useEffect(() => {
+		const fetchData = async () => {
+		const response = await fetch('https://dev.to/api/articles?username=rajamanickam');
+		const jsonData = await response.json();
+		setData(jsonData.slice(0, 5)); // Limiting the data to the first 10 elements
+	};
+		fetchData();
+	}, []);
 	
-	  useEffect(() => {
-		fetchData()
-	  }, [])
+	
 	
 	  var settings = {
 		dots: true,
 		infinite: true,
 		speed: 500,
+		arrows: true,
 		slidesToShow: 3,
 		slidesToScroll: 3,
 		autoplay: true,
@@ -73,23 +71,23 @@ function Blog () {
 			
 				<div className='row'>	
 				<Slider {...settings}>
-				{users.map(user => (
+				{data.map((item) => (
 					<div className='' data-aos="fade-up" data-aos-duration="1000">
 					   <div className='card mt-20 mx-3'>
-						  <img src={user.cover_image} className='card-img-top' alt={user.title} />
+						  <img src={item.cover_image} className='card-img-top' alt={item.title} />
 						  <div className='card-body'>
                 		<ul className='blog-logo-date mb-0'>
-							  <li><p><i className='uil uil-calendar-alt'></i> {user.readable_publish_date}</p></li>
+							  <li><p><i className='uil uil-calendar-alt'></i> {item.readable_publish_date}</p></li>
 							  <li><img src={devlogo} className='blog-logo' alt='dev.to logo' /></li>
                 		</ul>
 						<hr />
-						    <p className='card-title'><a href={user.url} target='_blank'>{user.title}</a></p>
+						    <p className='card-title'><a href={item.url} target='_blank'>{item.title}</a></p>
 							<div className='blog-desc'>
 								<ul className='d-flex'>
-									<li className='pl-3'><i className='uil uil-heart-alt'></i> {user.public_reactions_count}</li>
-									<li><i className='uil uil-comment-alt'></i> {user.comments_count}</li>
+									<li className='pl-3'><i className='uil uil-heart-alt'></i> {item.public_reactions_count}</li>
+									<li><i className='uil uil-comment-alt'></i> {item.comments_count}</li>
 								</ul>
-								<a href={user.url} target='_blank'><i className='uil uil-link'></i> Read More..</a>
+								<a href={item.url} target='_blank'><i className='uil uil-link'></i> Read More..</a>
 							</div>
 						  </div>
 						</div>
