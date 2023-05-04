@@ -52,6 +52,10 @@
       }
     });
 
+    document.addEventListener('contextmenu', event => {
+      event.preventDefault();
+    });
+
     // back to top
     jQuery(function(a) {
     a(document).ready(function() {

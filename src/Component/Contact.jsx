@@ -21,7 +21,7 @@ function Contact() {
 
 
   const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})[0-9]+$/;
+  const phoneRegex = /^\+?[1-9][0-9]{9,12}$/;
   const nameRegex = /[0-9a-zA-Z]{3,}/;
   const msgRegex = /[0-9a-zA-Z]{6,}/;
 
@@ -39,7 +39,7 @@ function Contact() {
 
     if (!formData.phone) {
       isValid = false;
-      newErrors.phone = 'Phone no is required';
+      newErrors.phone = 'Phone no is required *';
     } else if (!phoneRegex.test(formData.phone)) {
       isValid = false;
       newErrors.phone = 'Phone is invalid *';
@@ -71,6 +71,7 @@ function Contact() {
     emailjs.sendForm('service_2hplr7f', 'template_0amgy3s', form.current, 'user_e6CZf4K6kU9TCU80qBwFO')
       .then((result) => {
           alert('Thank You, I am shortly contact with you');
+          window.location.reload();
       }, (error) => {
           alert('Oops!. Try again later');
       });
@@ -80,6 +81,8 @@ function Contact() {
     AOS.refresh();
   }, []);
       
+
+
     return(
         <section className='contact' id='contact'>
         <div className='container'>
